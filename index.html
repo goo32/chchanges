@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChChanges Demo</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="jquery.chchanges.js"></script>
+
+  <script>
+    $(function(){
+      $(".container").chchanges();
+    });    
+  </script>
+
+  <style>
+    .unsaved, form-container.unsaved {
+      border: 2px solid #ed9c28;
+    }
+    .checkbox.unsaved,
+    .radio-group.unsaved {
+      background-color: #ed9c28;
+    }
+  </style>
+</head>
+<body>
+  <div class="container form-container">
+    <h2>ChChanges Demo</h2>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputFirstName">First Name</label>
+        <input type="text" class="form-control" id="exampleInputFirstName">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputLastName">Last Name</label>
+        <input type="text" class="form-control" id="exampleInputLastName">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputDescription">Description</label>
+        <textarea id="exampleInputDescription" class="form-control" rows="3"></textarea>      
+      </div>
+
+
+      <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="y"> Yes
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="n"> No
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group radio-group">
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+            Option 1
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+            Option 2
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+            Option 3
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <select class="form-control">
+          <option selected="true">Select 1</option>
+          <option>Select 2</option>
+          <option>Select 3</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-default" disabled="true">Submit</button>
+    </form>      
+  </div>
+
+</body>
+</html>
